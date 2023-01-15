@@ -22,6 +22,8 @@ import {MatListModule} from '@angular/material/list';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { CardComponent } from './Components/card/card.component';
 import { GridComponent } from './Components/grid/grid.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent, PokemonListComponent, PokemonDetailComponent, CardComponent, GridComponent],
@@ -43,7 +45,13 @@ import { GridComponent } from './Components/grid/grid.component';
     MatTreeModule,
     MatTabsModule,
     MatListModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent],
