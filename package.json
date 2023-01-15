@@ -23,6 +23,7 @@
     "@ngrx/effects": "^13.0.1",
     "@ngrx/store": "^13.0.1",
     "@ngrx/store-devtools": "^13.0.1",
+    "angular-cli-ghpages": "^1.0.5",
     "apexcharts": "^3.36.3",
     "bootstrap": "^5.2.3",
     "ng-apexcharts": "^1.7.4",
