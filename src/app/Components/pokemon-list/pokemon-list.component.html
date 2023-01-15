@@ -1,0 +1,36 @@
+
+<div class="home-container" >
+ 
+  <div class="post_card">
+    <div class="home-buttons">
+      <button mat-raised-button (click)="cardView()">
+        <mat-icon>view_quilt</mat-icon>
+      </button>
+      <button mat-raised-button (click)="listView()">
+        <mat-icon>list</mat-icon>
+      </button>
+    </div>
+    <div [@cardsAnimation]="animationState">
+      <div *ngIf="isCardView">
+        <div class="view-container">
+          <div class="card-container">
+            <div *ngFor="let pokemon of pokemons"   >
+              <div class="card">
+                <app-card [item]="pokemon"></app-card>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+   
+    <div *ngIf="!isCardView" >
+      
+        <div class="view-container">
+          <app-grid [item]="pokemons"></app-grid>
+        </div>
+    
+    </div>
+    
+  </div>
+</div>

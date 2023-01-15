@@ -1,0 +1,46 @@
+
+<div class="detail-container">
+    <button mat-raised-button (click)="home()">
+        <mat-icon>home</mat-icon>
+        <span>Back</span>
+    </button>
+
+    <div class="detail-content">
+
+    
+        <mat-card>
+            <mat-card-header class="detail-card">
+                <mat-card-title-group>
+                <mat-card-title>{{pokemon.name}}</mat-card-title>
+                <img mat-card-image src="{{pokemon.image}}" alt="{{pokemon.name}}">
+                </mat-card-title-group>
+            </mat-card-header>
+
+            <mat-card-content>
+                <mat-chip-list>
+                    <mat-chip color="primary" *ngIf="pokemon.types">Type: {{pokemon.types}}</mat-chip>
+                    <mat-chip color="primary" *ngIf="pokemon.height">Height: {{pokemon.height}}</mat-chip>
+                    <mat-chip color="primary" *ngIf="pokemon.weight">Weight: {{pokemon.weight}}</mat-chip>
+                </mat-chip-list>
+
+                <mat-tab-group class="card-tags">
+                    <mat-tab label="Abilities">
+                        <mat-list role="list">
+                            <mat-list-item role="listitem" *ngFor="let ability of pokemon.abilities">{{ability}}</mat-list-item>
+                        </mat-list>
+
+                        
+                    </mat-tab>
+                    <mat-tab label="Moves">
+                        <mat-list role="list">
+                            <mat-list-item role="listitem" *ngFor="let move of pokemon.moves">{{move}}</mat-list-item>
+                        </mat-list>
+                    </mat-tab>
+                    
+                </mat-tab-group>
+
+
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

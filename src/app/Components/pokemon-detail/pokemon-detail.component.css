@@ -1,0 +1,15 @@
+
+.detail-container{
+width: 50%;
+margin: auto;
+margin-top: 7%;
+}
+.detail-content{
+    margin-top: 5%;
+}
+.detail-card .mat-card-title{
+    text-transform: uppercase;
+}
+.card-tags{
+    margin-top: 3%;
+}

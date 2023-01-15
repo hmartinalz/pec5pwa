@@ -1,0 +1,27 @@
+
+.home-container{
+    width: 68%;
+    margin: auto;
+    margin-top: 7%;
+}
+.home-buttons{
+    display: flex; 
+    justify-content: flex-end;
+    margin: auto;
+}
+.view-container{
+    width: 100%;
+}
+
+.card-container{
+    display:flex;
+    flex-flow:row wrap;
+    align-content:stretch;
+    gap:2%;
+}
+    
+.card{
+    width: 260px;
+    margin-top: 5%;
+}
+
